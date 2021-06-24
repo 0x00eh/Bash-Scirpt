@@ -1,0 +1,85 @@
+#!/bin/bash
+echo "++++++IP Grabbing from ifconfig+++++++"
+echo "  ########  #######   ########  "
+echo "     ##     ##    #      ##     "
+echo "     ##     ## ###       ##     "
+echo "     ##     ##    #      ##     "
+echo "     ##     #######      ##     "
+echo "-------------------------------------"
+
+
+#!/bin/bash
+############Looping and skipping
+for ((x=1;x<100; x++))
+do
+if [[ $x%2 -ne 0 ]]
+  then 
+     echo "$x is odd"
+fi
+done
+############A personalized Echo
+
+read var
+echo "Welcome $var"
+
+############Looping with Numbers
+
+#!/bin/bash
+for ((x=1;x<=50;x++))
+ {
+    echo $x
+ }
+############The world of Numbers 
+
+#!/bin/bash
+read n1
+read n2
+sum=$(($n1 + $n2))
+diff=$(($n1 - $n2))
+pro=$(($n1 * $n2))
+quo=$(($n1 / $n2))
+echo "$sum"
+echo "$diff"
+echo "$pro"
+echo "$quo"
+
+############Camparing Numbers
+
+read x
+read y
+if [[ x -lt y ]]
+   then 
+   echo "X is less than Y"
+ elif [[ x -gt y ]]
+   then  
+   echo "X is greater than Y"
+ else [[ $x -eq $y ]]
+   echo "X is equal to Y"
+fi
+############# More on Conditionals
+
+
+read line
+printf "%.3f" $(echo "scale = 4; $line" | bc)
+############# Arithmetic Operations
+
+read N  
+sum=0
+for ((x=1;x<=N;x++))
+do 
+  read num
+  sum=$(($sum+$num))
+done
+printf "%.3f" $(echo "scale=4; $sum/$N " | bc)
+
+############Compute the Average
+
+read a
+read b
+read c
+if [[ $a -ne $b || $b -ne $c || $c -ne $a ]]
+  then
+  echo "SCALENE"
+  else [[ $a -eq $b || $b -eq $c || $c -eq $a ]]
+     echo "EQUILATERAL"
+fi
