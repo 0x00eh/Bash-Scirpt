@@ -6,6 +6,6 @@
 password = $(your_password_which you are authenticating)
 for i in {000000..999999}
 do 
-   echo " $password $i"
+   echo " $password $i "
 done
 
